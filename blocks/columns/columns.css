@@ -13,6 +13,7 @@
 
 .columns > div > .columns-img-col {
   order: 0;
+    background-color: grey;
 }
 
 .columns > div > .columns-img-col img {
