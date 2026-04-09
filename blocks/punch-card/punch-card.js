@@ -107,18 +107,15 @@ export default function decorate(block) {
       errorEl.className = 'punch-card-error';
       errorEl.textContent = bottomText;
       block.append(errorEl);
-    } else {
-      // Check for links
-      const link = bottomRow.querySelector('a');
-      if (link) {
-        const p = document.createElement('p');
-        p.append(link.cloneNode(true));
-        block.append(p);
-      } else if (bottomText) {
-        const p = document.createElement('p');
+    } else if (bottomText) {
+      const p = document.createElement('p');
+      const bottomContent = bottomRow.querySelector(':scope > div');
+      if (bottomContent) {
+        p.innerHTML = bottomContent.innerHTML;
+      } else {
         p.textContent = bottomText;
-        block.append(p);
       }
+      block.append(p);
     }
   }
 }
