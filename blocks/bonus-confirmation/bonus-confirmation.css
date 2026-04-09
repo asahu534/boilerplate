@@ -1,0 +1,126 @@
+/* bonus-confirmation block styles */
+
+.bonus-confirmation {
+  /* ===== DESIGN TOKENS ===== */
+
+  /* Layout */
+  --bonus-confirmation-width: 317px;
+  --bonus-confirmation-padding: 40px 30px;
+  --bonus-confirmation-gap: 24px;
+  --bonus-confirmation-border-radius: 10px;
+  --bonus-confirmation-background: #fff;
+  --bonus-confirmation-border-width: 1px;
+  --bonus-confirmation-border-color: #ced4da;
+
+  /* Title */
+  --bonus-confirmation-title-font-family: 'Inter', sans-serif;
+  --bonus-confirmation-title-font-size: 28px;
+  --bonus-confirmation-title-font-weight: 700;
+  --bonus-confirmation-title-line-height: 34px;
+  --bonus-confirmation-title-color: #101418;
+  --bonus-confirmation-title-text-transform: uppercase;
+
+  /* Body */
+  --bonus-confirmation-body-font-family: 'Inter', sans-serif;
+  --bonus-confirmation-body-font-size: 14px;
+  --bonus-confirmation-body-font-weight: 400;
+  --bonus-confirmation-body-line-height: 20px;
+  --bonus-confirmation-body-color: #343a40;
+
+  /* Icon */
+  --bonus-confirmation-icon-size: 120px;
+  --bonus-confirmation-icon-border-width: 6px;
+  --bonus-confirmation-icon-border-color: #343a40;
+  --bonus-confirmation-icon-check-color: #343a40;
+  --bonus-confirmation-icon-check-size: 48px;
+
+  /* Button */
+  --bonus-confirmation-button-bg: #101418;
+  --bonus-confirmation-button-color: #fff;
+  --bonus-confirmation-button-font-family: 'Inter', sans-serif;
+  --bonus-confirmation-button-font-size: 16px;
+  --bonus-confirmation-button-font-weight: 600;
+  --bonus-confirmation-button-padding: 16px 32px;
+  --bonus-confirmation-button-border-radius: 30px;
+  --bonus-confirmation-button-width: 100%;
+
+  /* ===== BLOCK STYLES ===== */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bonus-confirmation-gap);
+  width: var(--bonus-confirmation-width);
+  max-width: 100%;
+  padding: var(--bonus-confirmation-padding);
+  background: var(--bonus-confirmation-background);
+  border: var(--bonus-confirmation-border-width) solid var(--bonus-confirmation-border-color);
+  border-radius: var(--bonus-confirmation-border-radius);
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.bonus-confirmation h2,
+.bonus-confirmation h3 {
+  font-family: var(--bonus-confirmation-title-font-family);
+  font-size: var(--bonus-confirmation-title-font-size);
+  font-weight: var(--bonus-confirmation-title-font-weight);
+  line-height: var(--bonus-confirmation-title-line-height);
+  color: var(--bonus-confirmation-title-color);
+  text-transform: var(--bonus-confirmation-title-text-transform);
+  margin: 0;
+}
+
+/* Checkmark icon */
+.bonus-confirmation .bonus-confirmation-icon {
+  width: var(--bonus-confirmation-icon-size);
+  height: var(--bonus-confirmation-icon-size);
+  border: var(--bonus-confirmation-icon-border-width) solid var(--bonus-confirmation-icon-border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.bonus-confirmation .bonus-confirmation-icon::after {
+  content: '✓';
+  font-size: var(--bonus-confirmation-icon-check-size);
+  color: var(--bonus-confirmation-icon-check-color);
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Body text */
+.bonus-confirmation p {
+  font-family: var(--bonus-confirmation-body-font-family);
+  font-size: var(--bonus-confirmation-body-font-size);
+  font-weight: var(--bonus-confirmation-body-font-weight);
+  line-height: var(--bonus-confirmation-body-line-height);
+  color: var(--bonus-confirmation-body-color);
+  margin: 0;
+}
+
+/* Close button */
+.bonus-confirmation .button-wrapper {
+  width: var(--bonus-confirmation-button-width);
+  margin: 0;
+}
+
+.bonus-confirmation a.button {
+  display: block;
+  width: 100%;
+  background: var(--bonus-confirmation-button-bg);
+  color: var(--bonus-confirmation-button-color);
+  font-family: var(--bonus-confirmation-button-font-family);
+  font-size: var(--bonus-confirmation-button-font-size);
+  font-weight: var(--bonus-confirmation-button-font-weight);
+  padding: var(--bonus-confirmation-button-padding);
+  border-radius: var(--bonus-confirmation-button-border-radius);
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+}
