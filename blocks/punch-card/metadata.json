@@ -1,0 +1,24 @@
+{
+  "variantName": "punch-card",
+  "baseBlock": "punch-card",
+  "source": "figma",
+  "figmaNodeId": "1435:37980",
+  "figmaFileKey": "R1pehdY1rYkunbvetczSlF",
+  "characteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "loyalty-reward",
+    "imagePattern": "noimg",
+    "contentPattern": {
+      "structure": "stacked-center",
+      "buttonCount": 0,
+      "imageCount": 0
+    }
+  },
+  "usage": {
+    "pagesUsing": ["punch-card"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-09T00:00:00.000Z"
+  },
+  "createdAt": "2026-04-09T00:00:00.000Z"
+}

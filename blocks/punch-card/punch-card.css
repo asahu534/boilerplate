@@ -1,0 +1,236 @@
+/* punch-card component tokens — extracted from Figma node 1435:37980 */
+
+/* punch-card block styles */
+
+.punch-card {
+  /* ===== DESIGN TOKENS ===== */
+
+  /* Layout & Dimensions */
+  --punch-card-width: 338px;
+  --punch-card-width-desktop: 520px;
+  --punch-card-padding-x: 10px;
+  --punch-card-padding-y: 30px;
+  --punch-card-gap: 25px;
+  --punch-card-border-radius: 10px;
+
+  /* Colors */
+  --punch-card-background: #f8f9fa;
+  --punch-card-border-color: #ced4da;
+  --punch-card-border-width: 1px;
+
+  /* Typography - Title */
+  --punch-card-title-font-family: 'Inter', sans-serif;
+  --punch-card-title-font-size: 16px;
+  --punch-card-title-font-weight: 700;
+  --punch-card-title-line-height: 19px;
+  --punch-card-title-color: #101418;
+  --punch-card-title-text-transform: uppercase;
+  --punch-card-title-text-align: center;
+
+  /* Typography - Body */
+  --punch-card-body-font-family: 'Inter', sans-serif;
+  --punch-card-body-font-size: 13px;
+  --punch-card-body-font-weight: 400;
+  --punch-card-body-line-height: 16px;
+  --punch-card-body-color: #343a40;
+  --punch-card-body-text-align: center;
+
+  /* Punch Circles */
+  --punch-card-circle-size: 40px;
+  --punch-card-circle-gap: 25px;
+  --punch-card-circle-border-width: 2px;
+  --punch-card-circle-border-color: #343a40;
+  --punch-card-circle-empty-bg: transparent;
+  --punch-card-circle-filled-bg: #343a40;
+
+  /* Points Badge */
+  --punch-card-badge-width: 32px;
+  --punch-card-badge-height: 26px;
+  --punch-card-badge-font-size: 10px;
+  --punch-card-badge-font-weight: 600;
+  --punch-card-badge-color: #343a40;
+
+  /* NEW Tag */
+  --punch-card-tag-bg: #101418;
+  --punch-card-tag-color: #fff;
+  --punch-card-tag-font-size: 12px;
+  --punch-card-tag-font-weight: 600;
+  --punch-card-tag-line-height: 9px;
+  --punch-card-tag-padding-x: 8px;
+  --punch-card-tag-padding-y: 4px;
+  --punch-card-tag-border-radius: 4px;
+
+  /* Completed State */
+  --punch-card-check-size: 24px;
+  --punch-card-check-bg: #101418;
+  --punch-card-check-color: #fff;
+
+  /* Error State */
+  --punch-card-error-color: #dc3545;
+  --punch-card-error-icon-size: 16px;
+
+  /* Link */
+  --punch-card-link-color: #101418;
+  --punch-card-link-font-size: 13px;
+  --punch-card-link-font-weight: 400;
+  --punch-card-link-text-decoration: underline;
+
+  /* Bottom Text */
+  --punch-card-bottom-text-max-width: 308px;
+
+  /* Shadows */
+  --punch-card-shadow: none;
+
+  /* Transitions */
+  --punch-card-transition-duration: 200ms;
+  --punch-card-transition-timing: ease;
+
+  /* ===== BLOCK STYLES ===== */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--punch-card-gap);
+  width: var(--punch-card-width);
+  max-width: 100%;
+  padding: var(--punch-card-padding-y) var(--punch-card-padding-x);
+  background: var(--punch-card-background);
+  border: var(--punch-card-border-width) solid var(--punch-card-border-color);
+  border-radius: var(--punch-card-border-radius);
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  text-align: var(--punch-card-body-text-align);
+}
+
+/* Points badge — top-right corner */
+.punch-card .punch-card-points {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-family: var(--punch-card-body-font-family);
+  font-size: var(--punch-card-badge-font-size);
+  font-weight: var(--punch-card-badge-font-weight);
+  color: var(--punch-card-badge-color);
+}
+
+/* NEW tag — top-left corner */
+.punch-card .punch-card-tag {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  background: var(--punch-card-tag-bg);
+  color: var(--punch-card-tag-color);
+  font-family: var(--punch-card-title-font-family);
+  font-size: var(--punch-card-tag-font-size);
+  font-weight: var(--punch-card-tag-font-weight);
+  line-height: var(--punch-card-tag-line-height);
+  padding: var(--punch-card-tag-padding-y) var(--punch-card-tag-padding-x);
+  border-radius: var(--punch-card-tag-border-radius);
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+/* Title */
+.punch-card h2,
+.punch-card h3,
+.punch-card h4 {
+  font-family: var(--punch-card-title-font-family);
+  font-size: var(--punch-card-title-font-size);
+  font-weight: var(--punch-card-title-font-weight);
+  line-height: var(--punch-card-title-line-height);
+  color: var(--punch-card-title-color);
+  text-transform: var(--punch-card-title-text-transform);
+  text-align: var(--punch-card-title-text-align);
+  margin: 0;
+}
+
+/* Body / description text */
+.punch-card p {
+  font-family: var(--punch-card-body-font-family);
+  font-size: var(--punch-card-body-font-size);
+  font-weight: var(--punch-card-body-font-weight);
+  line-height: var(--punch-card-body-line-height);
+  color: var(--punch-card-body-color);
+  text-align: var(--punch-card-body-text-align);
+  margin: 0;
+  max-width: var(--punch-card-bottom-text-max-width);
+}
+
+/* Punch circles row */
+.punch-card .punch-card-circles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--punch-card-circle-gap);
+}
+
+/* Individual circle */
+.punch-card .punch-card-circle {
+  width: var(--punch-card-circle-size);
+  height: var(--punch-card-circle-size);
+  border-radius: 50%;
+  border: var(--punch-card-circle-border-width) solid var(--punch-card-circle-border-color);
+  background: var(--punch-card-circle-empty-bg);
+  box-sizing: border-box;
+  transition: background var(--punch-card-transition-duration) var(--punch-card-transition-timing);
+}
+
+/* Filled circle */
+.punch-card .punch-card-circle.filled {
+  background: var(--punch-card-circle-filled-bg);
+}
+
+/* Completed check icon */
+.punch-card .punch-card-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: var(--punch-card-check-size);
+  height: var(--punch-card-check-size);
+  background: var(--punch-card-check-bg);
+  color: var(--punch-card-check-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Error message */
+.punch-card .punch-card-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: var(--punch-card-body-font-family);
+  font-size: var(--punch-card-body-font-size);
+  font-weight: var(--punch-card-body-font-weight);
+  line-height: var(--punch-card-body-line-height);
+  color: var(--punch-card-body-color);
+  text-align: var(--punch-card-body-text-align);
+  max-width: var(--punch-card-bottom-text-max-width);
+}
+
+.punch-card .punch-card-error::before {
+  content: '⚠';
+  color: var(--punch-card-error-color);
+  font-size: var(--punch-card-error-icon-size);
+  flex-shrink: 0;
+}
+
+/* Link styling */
+.punch-card a {
+  color: var(--punch-card-link-color);
+  font-size: var(--punch-card-link-font-size);
+  font-weight: var(--punch-card-link-font-weight);
+  text-decoration: var(--punch-card-link-text-decoration);
+}
+
+/* Desktop responsive */
+@media (width >= 900px) {
+  .punch-card {
+    width: var(--punch-card-width-desktop);
+  }
+}
